@@ -109,17 +109,21 @@ def menu_choice():
 
 def main_loop():
     
-    choice = menu_choice()
-    if choice == 'c':
-        draw_circle()
-    elif choice == 'r':
-        draw_rectangular()
-    elif choice == 's':
-        draw_square()
-    elif choice == 'p':
-        draw_pentagon()
-    elif choice == 'o':
-        draw_oval()
-    else:
-        print("Invalid choice.")
+    a = 0
+    while True:
+        choice = menu_choice()
+        if choice == None:
+            continue
+        if choice == 'c':
+            draw_circle()
+        elif choice == 'r':
+            draw_rectangular()
+        elif choice == 's':
+            draw_square()
+        elif choice == 'p':
+            draw_pentagon()
+        elif choice == 'o':
+            draw_oval()
+        else:
+            menu_choice()
 
